@@ -1,0 +1,199 @@
+body {
+    font-family: 'Inter', sans-serif; /* Cambiar la fuente a Inter */
+    background-color: #E9ECF8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    background-color: #E9ECF8;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header .logo img {
+    width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.input-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.input-section textarea {
+    width: 100%;
+    height: 100%;
+    border: none; /* Sin bordes */
+    outline: none; /* Sin contorno al hacer clic */
+    color: #0A3871; /* Color del texto */
+    font-family: 'Inter', sans-serif; /* Fuente Inter */
+    padding: 15px;
+    font-size: 18px; /* Texto un poco más grande */
+    resize: none;
+    box-sizing: border-box;
+    flex-grow: 1;
+    background-color: #E9ECF8; /* Mismo color de fondo */
+}
+
+.input-section textarea::placeholder {
+    color: #0A3871; /* Color del placeholder */
+    font-size: 18px; /* Tamaño del placeholder un poco más grande */
+}
+
+.output-section {
+    flex-basis: 30%; /* Máximo ancho del 30% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Para posicionar el botón "Copiar" al fondo */
+}
+
+.message img {
+    max-width: 100%;
+    height: auto;
+}
+
+.message p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.message span {
+    font-size: 14px;
+    color: #555;
+}
+
+footer.main-footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15%;
+    width: 70%; /* Ajustar el ancho para que se vea bien con el margen */
+}
+
+footer.main-footer .note {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+footer.main-footer .note i {
+    margin-right: 5px;
+    color: #888;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.encrypt-btn, .decrypt-btn, #copy-btn {
+    width: 250px; /* Ancho fijo de los botones */
+    padding: 15px; /* Ajustar el padding para los botones */
+    font-size: 14px; /* Tamaño de fuente un poco más pequeño */
+    border-radius: 20px; /* Radio de los botones */
+    border: none;
+    cursor: pointer;
+   
+    
+}
+
+.encrypt-btn {
+    background-color: #0A3871; /* Color de fondo del botón Encriptar */
+    color: #fff; /* Color de la fuente del botón Encriptar */
+}
+
+.decrypt-btn {
+    background-color: #D8DFE8; /* Color de fondo del botón Desencriptar */
+    color: #0A3871; /* Color de la fuente del botón Desencriptar */
+    border: 1px solid #0A3871;
+}
+
+#copy-btn {
+    background-color: #fff; /* Color de fondo del botón Copiar */
+    color: #0A3871; /* Color de la fuente del botón Copiar */
+    margin-top: 20px; /* Separar el botón del texto */
+    position: absolute;
+    bottom: 20px; /* Posicionar al fondo */
+    border: 1px solid #0A3871;
+}
+
+footer.developer-footer {
+    margin-left: 15%;
+    background-color: #E9ECF8;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-section, .output-section {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 0; /* Ajustar el margen para pantallas más pequeñas */
+    }
+    
+    .input-section textarea {
+        height: 200px;
+    }
+    
+    .output-section {
+        max-width: 100%;
+    }
+    
+    footer.main-footer {
+        margin-left: 0; /* Ajustar el margen para pantallas más pequeñas */
+        width: 100%;
+        align-items: center; /* Centrar los elementos */
+    }
+    
+    .buttons {
+        justify-content: center; /* Centrar los botones */
+    }
+    
+    .encrypt-btn, .decrypt-btn, #copy-btn {
+        width: 250px; /* Mantener el ancho de los botones */
+    }
+}
